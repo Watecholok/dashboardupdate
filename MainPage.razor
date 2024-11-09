@@ -1,0 +1,126 @@
+﻿@page "/dashboard"
+@inject NavigationManager _navigation
+@layout NoLayout
+
+<div class="navbar">
+
+    <div class="NavBarTitleContainer">
+
+        <div class="title-wrapper">
+            <h1>Accountrix</h1>
+        </div>
+
+        <div class="title-img-container">
+            <img class="title-img-wrapper" src="../css/account_balance_wallet_24dp_000000_FILL0_wght400_GRAD0_opsz24.png">
+        </div>
+
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Lorem
+            </MudButton>
+        </div>
+
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Lorem
+            </MudButton>
+        </div>
+
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Lorem
+            </MudButton>
+        </div>
+        
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Lorem
+            </MudButton>
+        </div>
+
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Lorem
+            </MudButton>
+        </div>
+
+    </div>
+
+
+
+    <div class="NavBarButtonContainer">
+        <div class="btn-wrapper">
+            <MudButton Color="Color.Dark" Variant="Variant.Text" OnClick="NavigateToLogin" Size="Size.Small">
+                Logout
+            </MudButton>
+        </div>
+</div>
+</div>
+
+<!--For spacing-->
+<MudContainer Style="padding:10px; background-color: #41413f;" Fixed="true">
+</MudContainer>
+
+<MudGrid Style=" background-color: #41413f; padding: 20px; display: flex; flex-direction:row;">
+    
+    <MudPaper Elevation="3" Class="pa-4" Style="width=30%; height: 830px; background-color: #2c2c2a;">
+        <MudItem xs="12">
+            <h1>Hello {User}, what shall we do today? </h1>
+        </MudItem>
+        <MudItem xs="12">
+            <MudContainer Style="background-color: #2c2c2a; display: flex; flex-direction:column;" Fixed="true">
+                <MudGrid Style="padding:12px;display: flex; flex-direction:row;" Justify="Justify.FlexStart">
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">View Transactions</MudButton>
+                    </MudItem>
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">Add Transactions</MudButton>
+                    </MudItem>
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">Edit Transactions</MudButton>
+                    </MudItem>
+                </MudGrid>
+                <MudGrid Style="padding:12px;display: flex; flex-direction:row;" Justify="Justify.FlexStart">
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">Item Management</MudButton>
+                    </MudItem>
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">Add Item</MudButton>
+                    </MudItem>
+                    <MudItem>
+                        <MudButton Style="height: 140px; width: 140px; background-color: #fff200;" Variant="Variant.Filled">Delete Item</MudButton>
+                    </MudItem>
+
+                </MudGrid>
+            </MudContainer> <!--Both Rows of buttons-->
+        </MudItem>
+    </MudPaper>
+
+    <!--For spacing-->
+    <MudPaper Elevation="0" Class="pa-4" Style="width: 5px; background-color: #41413f;">
+    </MudPaper>
+
+    <MudPaper Elevation="3" Class="pa-4" Style="width: 60%; height: 830px; background-color: #2c2c2a;">
+        <h1>Charts whatever etc. </h1>
+    </MudPaper>
+    
+</MudGrid>
+
+<div class="footer-section">
+    <div class="footer-wrapper">
+        <h1>Copyright © 2024 Accountrix. All rights reserved.</h1>
+    </div>
+</div>
+
+@code {
+
+    private void NavigateToRegister()
+    {
+        _navigation.NavigateTo("/register");
+    }
+
+    private void NavigateToLogin()
+    {
+        _navigation.NavigateTo("/login");
+    }
+}
